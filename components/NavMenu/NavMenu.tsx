@@ -1,11 +1,16 @@
-import { HamburgerMenu } from "../HamburgerMenu/HamburgerMenu"
-import { SearchbarDropdown } from "../SearchbarDropdown/SearchbarDropdown"
+import { ShoppingCartButton } from "../ShoppingCartButton/ShoppingCartButton"
+import { UserAccountButton } from "../UserAccountButton/UserAccountButton"
+import { SearchbarDropdownButton } from "../SearchbarDropdownButton/SearchbarDropdownButton"
+import { HamburgerMenuButton } from "../HamburgerMenuButton/HamburgerMenuButton"
 
 export const NavMenu = () => {
   return (
     <div className="flex w-[90px] justify-between">
-      <SearchbarDropdown />
-      <HamburgerMenu />
+      <ShoppingCartButton />
+      <UserAccountButton />
+
+      <SearchbarDropdownButton />
+      <HamburgerMenuButton />
     </div>
   )
 }

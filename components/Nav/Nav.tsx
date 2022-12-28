@@ -4,15 +4,18 @@ import { AppContext } from "../../context/AppContext"
 import { LogoSvg } from "../LogoSvg/LogoSvg"
 import { NavMenu } from "../NavMenu/NavMenu"
 import { Searchbar } from "../Searchbar/Searchbar"
+import { useMediaQuery } from "./useMediaQuery"
 
 export const Nav = () => {
   const { appState } = useContext(AppContext)
   const toggled = appState.searchBarToggled
 
+  const isDesktop = useMediaQuery("(min-width: 768px)")
+
   return (
     <nav
       className={`flex items-center justify-center w-full ${
-        toggled ? "h-28" : "h-16"
+        toggled && !isDesktop ? "h-28" : "h-16"
       } bg-graySemiDark`}>
       <div className="flex items-center justify-between flex-col gap-4 w-5/6">
         <div className="flex items-center justify-between w-full">
@@ -20,10 +23,12 @@ export const Nav = () => {
             <LogoSvg />
           </Link>
 
+          {isDesktop && <Searchbar />}
+
           <NavMenu />
         </div>
 
-        {toggled && <Searchbar />}
+        {toggled && !isDesktop && <Searchbar />}
       </div>
     </nav>
   )
