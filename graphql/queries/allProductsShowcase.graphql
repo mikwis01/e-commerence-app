@@ -1,0 +1,12 @@
+query Assets {
+  products {
+    name
+    slug
+    images {
+      url
+    }
+    categories {
+      name
+    }
+  }
+}
