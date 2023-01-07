@@ -17,7 +17,7 @@ export const Nav = () => {
       className={`flex items-center justify-center w-full ${
         toggled && !isDesktop ? "h-28" : "h-16"
       } bg-graySemiDark`}>
-      <div className="flex items-center justify-between flex-col gap-4 w-5/6">
+      <div className="max-w-5xl flex items-center justify-between flex-col gap-4 w-5/6">
         <div className="flex items-center justify-between w-full">
           <Link href="/">
             <LogoSvg />

@@ -1,12 +1,12 @@
 overwrite: true
-schema: 'https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clb5foy1v05z501t59plcb4de/master'
-documents: 'graphql/*.graphql'
+schema: "https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clbuso54x2zi201us9jafclyu/master"
+documents: "graphql/queries/*.graphql"
 generates:
-    generated/graphql.tsx:
-        plugins:
-            - 'typescript'
-            - 'typescript-operations'
-            - 'typescript-react-apollo'
-    ./graphql.schema.json:
-        plugins:
-            - 'introspection'
+  generated/graphql.tsx:
+    plugins:
+      - "typescript"
+      - "typescript-operations"
+      - "typescript-react-apollo"
+  ./graphql.schema.json:
+    plugins:
+      - "introspection"

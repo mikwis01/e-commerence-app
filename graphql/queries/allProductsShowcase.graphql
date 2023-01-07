@@ -1,4 +1,4 @@
-query Assets {
+query allProductsShowcase {
   products {
     name
     slug

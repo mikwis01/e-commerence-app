@@ -1,7 +1,14 @@
 import Head from "next/head"
-import { Nav } from "../components/Nav/Nav"
+import { Banner } from "../components/Banner/Banner"
+import { LandingProductBar } from "../components/LandingProductBar/LandingProductBar"
+import { MainLayout } from "../components/MainLayout/MainLayout"
+
+import { useAllProductsShowcaseQuery } from "../generated/graphql"
 
 export default function Home() {
+  const { data } = useAllProductsShowcaseQuery()
+  console.log(data)
+
   return (
     <>
       <Head key={""}>
@@ -10,7 +17,11 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <Nav />
+      <MainLayout>
+        <Banner />
+        <LandingProductBar header="Recommended for you" />
+        <LandingProductBar header="Discounted products" />
+      </MainLayout>
     </>
   )
 }
