@@ -5,16 +5,19 @@ interface Props {
 }
 
 interface AppState {
-  searchBarToggled: boolean
+  searchBar: boolean
+  mobileMenu: boolean
 }
 
 interface Context {
   appState: AppState
   setAppState: Dispatch<SetStateAction<AppState>>
+  handleToggle: () => void
 }
 
 const initailStateValue = {
-  searchBarToggled: false
+  searchBar: false,
+  mobileMenu: false
 }
 
 export const AppContext = createContext({} as Context)
@@ -22,5 +25,13 @@ export const AppContext = createContext({} as Context)
 export const ContextProvider: React.FC<Props> = ({ children }) => {
   const [appState, setAppState] = useState(initailStateValue)
 
-  return <AppContext.Provider value={{ appState, setAppState }}>{children}</AppContext.Provider>
+  const handleToggle = () => {
+    setAppState((prev) => ({ ...prev, searchBar: !prev.searchBar }))
+  }
+
+  return (
+    <AppContext.Provider value={{ appState, setAppState, handleToggle }}>
+      {children}
+    </AppContext.Provider>
+  )
 }

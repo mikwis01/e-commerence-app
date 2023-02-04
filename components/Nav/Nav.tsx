@@ -8,7 +8,7 @@ import { useMediaQuery } from "./useMediaQuery"
 
 export const Nav = () => {
   const { appState } = useContext(AppContext)
-  const toggled = appState.searchBarToggled
+  const toggled = appState.searchBar
 
   const isDesktop = useMediaQuery("(min-width: 768px)")
 

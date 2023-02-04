@@ -1,0 +1,47 @@
+query allProductsShowcase {
+  products {
+    name
+    slug
+    images {
+      url
+    }
+    categories {
+      name
+    }
+  }
+}
+
+query recommendedProducts {
+  recommended(where: { id: "cldpbitiz1xzg0bw5jutbi0e4" }) {
+    products {
+      images {
+        url
+      }
+      price
+      slug
+      name
+      id
+      categories {
+        name
+      }
+    }
+  }
+}
+
+query discountedProducts {
+  discounted(where: { id: "cldpbj9kq33a30aw8mp0h1nf4" }) {
+    products {
+      id
+      images {
+        url
+      }
+      price
+      slug
+      name
+      id
+      categories {
+        name
+      }
+    }
+  }
+}

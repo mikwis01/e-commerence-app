@@ -1,6 +1,7 @@
 import Head from "next/head"
 import { Banner } from "../components/Banner/Banner"
-import { LandingProductBar } from "../components/LandingProductBar/LandingProductBar"
+import { LandingDiscountedProducts } from "../components/LandingDiscountedProducts/LandingDiscountedProducts"
+import { LandingRecommendedProducts } from "../components/LandingRecommendedProducts/LandingRecommendedProducts"
 import { MainLayout } from "../components/MainLayout/MainLayout"
 
 import { useAllProductsShowcaseQuery } from "../generated/graphql"
@@ -19,8 +20,8 @@ export default function Home() {
       </Head>
       <MainLayout>
         <Banner />
-        <LandingProductBar header="Recommended for you" />
-        <LandingProductBar header="Discounted products" />
+        <LandingRecommendedProducts />
+        <LandingDiscountedProducts />
       </MainLayout>
     </>
   )
