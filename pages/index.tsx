@@ -4,12 +4,7 @@ import { LandingDiscountedProducts } from "../components/LandingDiscountedProduc
 import { LandingRecommendedProducts } from "../components/LandingRecommendedProducts/LandingRecommendedProducts"
 import { MainLayout } from "../components/MainLayout/MainLayout"
 
-import { useAllProductsShowcaseQuery } from "../generated/graphql"
-
 export default function Home() {
-  const { data } = useAllProductsShowcaseQuery()
-  console.log(data)
-
   return (
     <>
       <Head key={""}>
