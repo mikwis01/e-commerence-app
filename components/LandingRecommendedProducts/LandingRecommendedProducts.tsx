@@ -1,7 +1,9 @@
 import { useRecommendedProductsQuery } from "../../generated/graphql"
+import { useRouter } from "next/router"
 
 export const LandingRecommendedProducts = () => {
   const { data } = useRecommendedProductsQuery()
+  const router = useRouter()
 
   return (
     <div className="bg-graySemiDark w-5/6 max-w-5xl rounded-md text-white py-5 flex flex-col items-center gap-5 md:grid md:place-items-center md:grid-cols-4 md:gap-0">
@@ -10,6 +12,7 @@ export const LandingRecommendedProducts = () => {
       </p>
       {data?.recommended?.products.map((product) => (
         <div
+          onClick={() => router.push(`product/${product.slug}`)}
           key={product.id}
           className="bg-graySemiLight h-36 md:h-52 lg:h-72 w-5/6 rounded-md flex md:flex-col cursor-pointer">
           <img

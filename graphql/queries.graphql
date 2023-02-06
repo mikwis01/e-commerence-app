@@ -45,3 +45,17 @@ query discountedProducts {
     }
   }
 }
+
+query getProductsSlugs {
+  products {
+    slug
+  }
+}
+
+query getProductInfo($slug: String!) {
+  product(where: { slug: $slug }) {
+    id
+    name
+    price
+  }
+}
