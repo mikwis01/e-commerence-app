@@ -36,7 +36,12 @@ export const ContextProvider: React.FC<Props> = ({ children }) => {
 
   return (
     <AppContext.Provider
-      value={{ appState, setAppState, handleSearchbarToggle, handleMobileMenuToggle }}>
+      value={{
+        appState,
+        setAppState,
+        handleSearchbarToggle,
+        handleMobileMenuToggle
+      }}>
       {children}
     </AppContext.Provider>
   )

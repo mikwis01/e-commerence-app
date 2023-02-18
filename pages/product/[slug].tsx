@@ -14,6 +14,7 @@ import {
   GetProductsSlugsQuery
 } from "../../generated/graphql"
 import { apolloClient } from "../../apollo/client"
+import { InferGetStaticPathsType } from "../../types/types"
 
 export const getStaticPaths = async () => {
   const { data } = await apolloClient.query<GetProductsSlugsQuery>({
@@ -32,7 +33,7 @@ export const getStaticPaths = async () => {
   }
 }
 
-export const getStaticProps = async ({ params }: any) => {
+export const getStaticProps = async ({ params }: InferGetStaticPathsType) => {
   const slug = params?.slug
   const { data } = await apolloClient.query<GetProductInfoQuery>({
     query: GetProductInfoDocument,

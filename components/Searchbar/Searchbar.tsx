@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa"
 export const Searchbar = () => {
   return (
     <div
-      className={`flex items-center justify-between w-full md:w-4/6 h-8 text-white rounded border-2 border-grayLight`}>
+      className={`flex items-center justify-between w-full md:w-4/6 h-8 text-white rounded border-[1px] border-grayLight`}>
       <input
         type="text"
         placeholder="Search ..."

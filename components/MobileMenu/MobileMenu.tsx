@@ -1,6 +1,6 @@
 import { useContext } from "react"
-import { TfiClose } from "react-icons/tfi"
 import { AppContext } from "../../context/AppContext"
+import { TfiClose } from "react-icons/tfi"
 
 export const MobileMenu = () => {
   const { handleMobileMenuToggle } = useContext(AppContext)
