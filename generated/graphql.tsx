@@ -12695,7 +12695,7 @@ export type GetProductInfoQueryVariables = Exact<{
 }>;
 
 
-export type GetProductInfoQuery = { __typename?: 'Query', product?: { __typename?: 'Product', id: string, name: string, price: number } | null };
+export type GetProductInfoQuery = { __typename?: 'Query', product?: { __typename?: 'Product', id: string, name: string, price: number, images: Array<{ __typename?: 'Asset', url: string }> } | null };
 
 
 export const AllProductsShowcaseDocument = gql`
@@ -12870,6 +12870,9 @@ export const GetProductInfoDocument = gql`
     id
     name
     price
+    images {
+      url
+    }
   }
 }
     `;

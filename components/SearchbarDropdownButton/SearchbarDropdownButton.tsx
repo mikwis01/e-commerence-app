@@ -1,6 +1,6 @@
 import { FaAngleDown, FaAngleUp } from "react-icons/fa"
 import { useContext } from "react"
-import { AppContext } from "../../context/AppContext"
+import { AppContext } from "../../context/AppContext/AppContext"
 
 export const SearchbarDropdownButton = () => {
   const { appState, handleSearchbarToggle } = useContext(AppContext)

@@ -2,7 +2,7 @@ import { Footer } from "../Footer/Footer"
 import { Nav } from "../Nav/Nav"
 import { MobileMenu } from "../MobileMenu/MobileMenu"
 import { useContext } from "react"
-import { AppContext } from "../../context/AppContext"
+import { AppContext } from "../../context/AppContext/AppContext"
 
 type Props = {
   children?: React.ReactNode

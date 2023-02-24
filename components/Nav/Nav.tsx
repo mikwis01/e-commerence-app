@@ -1,6 +1,6 @@
 import Link from "next/link"
 import { useContext } from "react"
-import { AppContext } from "../../context/AppContext"
+import { AppContext } from "../../context/AppContext/AppContext"
 import { LogoSvg } from "../LogoSvg/LogoSvg"
 import { NavMenu } from "../NavMenu/NavMenu"
 import { Searchbar } from "../Searchbar/Searchbar"

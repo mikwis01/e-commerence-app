@@ -23,7 +23,7 @@ const initailStateValue = {
 
 export const AppContext = createContext({} as Context)
 
-export const ContextProvider: React.FC<Props> = ({ children }) => {
+export const AppContextProvider: React.FC<Props> = ({ children }) => {
   const [appState, setAppState] = useState(initailStateValue)
 
   const handleSearchbarToggle = () => {

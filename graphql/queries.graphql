@@ -57,5 +57,8 @@ query getProductInfo($slug: String!) {
     id
     name
     price
+    images {
+      url
+    }
   }
 }
