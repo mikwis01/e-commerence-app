@@ -2,9 +2,9 @@
 
 Fully functional e-commerence app
 
-##Features
+## Features
 
 - cart that saves products in the local storage
 - searchbar (search by product names and categories)
 
-##Completion level [30%]
+## Completion level [30%]
