@@ -14,7 +14,7 @@ export const LandingDiscountedProducts = () => {
         <div
           onClick={() => router.push(`product/${product.slug}`)}
           key={product.id}
-          className={`bg-graySemiLight h-36 md:h-52 lg:h-72 w-5/6 rounded-md flex md:flex-col cursor-pointer`}>
+          className={`bg-graySemiLight h-36 md:h-52 lg:h-72 w-5/6 rounded-md flex md:flex-col cursor-pointer hover:scale-105 transition-all`}>
           <img
             className="w-1/2 h-full object-scale-down object-center md:w-full md:h-1/2"
             src={product.images[0].url}
