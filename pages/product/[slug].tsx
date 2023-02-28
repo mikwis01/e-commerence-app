@@ -10,6 +10,7 @@ import { useCartContext } from "../../context/CartContext/CartContext"
 import { MainLayout } from "../../components/MainLayout/MainLayout"
 import Head from "next/head"
 import { CartItem } from "../../context/CartContext/types"
+import { useState } from "react"
 
 export const getStaticPaths = async () => {
   const { data } = await apolloClient.query<GetProductsSlugsQuery>({
@@ -44,6 +45,7 @@ export const getStaticProps = async ({
 
 const Product = ({ product }: { product: CartItem }) => {
   const { handleAddProduct } = useCartContext()
+  const [select, setSelect] = useState(1)
 
   return (
     <>
@@ -54,24 +56,38 @@ const Product = ({ product }: { product: CartItem }) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <MainLayout>
-        <div className="text-white">
-          <p>Id: {product.id}</p>
-          <p>Name: {product.name}</p>
-          <p>Price: {product.price}</p>
-          <select className="text-black">
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-          </select>
-          <br />
-          <button
-            onClick={() => handleAddProduct({ ...product, qty: 1 })}
-            className="bg-orange-500 p-4">
-            Add to cart
-          </button>
-        </div>
+        <article className="bg-graySemiDark w-5/6 max-w-5xl rounded-md text-white py-5 flex items-center justify-center gap-10">
+          <img
+            className="w-[45%] h-[500px] bg-graySemiLight rounded-xl object-scale-down object-center"
+            src={product.images[0].url}
+            alt={product.name}
+          />
+          <div className="w-[45%] h-[500px] rounded-xl flex flex-col gap-2">
+            <h1 className="text-2xl font-bold">{product.name}</h1>
+            <h4 className="text-xl font-semibold text-grayLight">$ {product.price}</h4>
+            <ul>
+              <li>Some info</li>
+              <li>Some info</li>
+              <li>Some info</li>
+              <li>Some info</li>
+            </ul>
+            <select
+              className="text-black"
+              onChange={(e) => setSelect(Number(e.target.value))}
+              value={select}>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <button
+              onClick={() => handleAddProduct({ ...product, qty: 1 * select })}
+              className="bg-orange-500 p-4">
+              Add to cart
+            </button>
+          </div>
+        </article>
       </MainLayout>
     </>
   )
