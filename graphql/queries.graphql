@@ -60,5 +60,9 @@ query getProductInfo($slug: String!) {
     images {
       url
     }
+    description
+    categories {
+      name
+    }
   }
 }

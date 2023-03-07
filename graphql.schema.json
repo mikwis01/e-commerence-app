@@ -81062,6 +81062,18 @@
             "deprecationReason": null
           },
           {
+            "name": "rawPayload_value_recursive",
+            "description": "Recursively tries to find the provided JSON scalar value inside the field.\nIt does use an exact match when comparing values.\nIf you pass `null` as value the filter will be ignored. \nNote: This filter fails if you try to look for a non scalar JSON value!",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Json",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
             "name": "release",
             "description": null,
             "type": {
@@ -82192,6 +82204,18 @@
             "type": {
               "kind": "SCALAR",
               "name": "String",
+              "ofType": null
+            },
+            "defaultValue": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "rawPayload_value_recursive",
+            "description": "Recursively tries to find the provided JSON scalar value inside the field.\nIt does use an exact match when comparing values.\nIf you pass `null` as value the filter will be ignored. \nNote: This filter fails if you try to look for a non scalar JSON value!",
+            "type": {
+              "kind": "SCALAR",
+              "name": "Json",
               "ofType": null
             },
             "defaultValue": null,
@@ -89360,6 +89384,12 @@
           },
           {
             "name": "json_path_exists",
+            "description": null,
+            "isDeprecated": false,
+            "deprecationReason": null
+          },
+          {
+            "name": "json_value_recursive",
             "description": null,
             "isDeprecated": false,
             "deprecationReason": null

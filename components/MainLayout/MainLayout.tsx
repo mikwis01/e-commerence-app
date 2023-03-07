@@ -14,7 +14,7 @@ export const MainLayout: React.FC<Props> = ({ children }) => {
   return (
     <>
       <Nav />
-      <main className="flex flex-col py-8 gap-8 items-center">{children}</main>
+      <main className="flex flex-col py-8 gap-8 items-center min-h-[80vh]">{children}</main>
       <Footer />
       {appState.mobileMenu && <MobileMenu />}
     </>
