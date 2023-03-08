@@ -9,7 +9,7 @@ interface ProductPageItem {
   readonly description: string
   readonly categories: {
     name: string
-  }
+  }[]
 }
 
 import {
@@ -80,6 +80,13 @@ const Product = ({ product }: { product: ProductPageItem }) => {
             <div className="flex flex-col gap-4 h-1/2">
               <h1 className="text-2xl font-bold">{product.name}</h1>
               <h4 className="text-xl font-semibold text-grayLight">$ {product.price}</h4>
+              <ul>
+                {product.categories.map((category) => (
+                  <li key={category.name} className="text-sm text-purpleLight font-bold">
+                    {category.name}
+                  </li>
+                ))}
+              </ul>
               <p>{product.description}</p>
 
               <div className="py-2 flex gap-4">
@@ -98,7 +105,7 @@ const Product = ({ product }: { product: ProductPageItem }) => {
               </div>
             </div>
 
-            <div className="h-1/2 flex items-end py-4">
+            <div className="h-1/2 flex items-end py-4 md:py-0">
               <button
                 onClick={() => handleAddProduct({ ...product, qty: select })}
                 className="bg-gradient-to-b from-purpleLight to-purpleDark p-4 font-bold rounded-md w-full">
