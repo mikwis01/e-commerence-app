@@ -42,7 +42,7 @@ export const CartContextProvider = ({ children }: { readonly children: React.Rea
       setCart((prev) =>
         prev?.map((item) => {
           if (item.id === product.id) {
-            return { ...item, qty: item.qty + 1 }
+            return { ...item, qty: item.qty + product.qty }
           } else {
             return item
           }

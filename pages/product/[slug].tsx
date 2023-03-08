@@ -100,7 +100,7 @@ const Product = ({ product }: { product: ProductPageItem }) => {
 
             <div className="h-1/2 flex items-end py-4">
               <button
-                onClick={() => handleAddProduct({ ...product, qty: 1 * select })}
+                onClick={() => handleAddProduct({ ...product, qty: select })}
                 className="bg-gradient-to-b from-purpleLight to-purpleDark p-4 font-bold rounded-md w-full">
                 Add to cart
               </button>
