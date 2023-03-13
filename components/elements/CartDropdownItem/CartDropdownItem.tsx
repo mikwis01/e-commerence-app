@@ -1,4 +1,4 @@
-import { CartItem } from "../../context/CartContext/types"
+import { CartItem } from "../../../context/CartContext/types"
 
 export const CartDropdownItem = ({ data }: { data: CartItem }) => {
   console.log(data.qty)

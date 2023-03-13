@@ -1,5 +1,5 @@
 import { FaShoppingCart } from "react-icons/fa"
-import { CartDropdown } from "../CartDropdown/CartDropdown"
+import { CartDropdown } from "../../modules/CartDropdown/CartDropdown"
 
 export const ShoppingCartButton = () => {
   return (

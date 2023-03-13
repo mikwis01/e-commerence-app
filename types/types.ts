@@ -8,3 +8,17 @@ export type InferGetStaticPathsType<T> = T extends () => Promise<{
     ? GetStaticPropsContext<R>
     : never
   : never
+
+export interface ProductPageItem {
+  readonly id: string
+  readonly name: string
+  readonly price: number
+  readonly images: {
+    url: string
+  }[]
+  readonly qty: number
+  readonly description: string
+  readonly categories: {
+    name: string
+  }[]
+}

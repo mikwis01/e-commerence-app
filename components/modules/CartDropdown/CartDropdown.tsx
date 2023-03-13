@@ -1,6 +1,6 @@
-import { CartDropdownItem } from "../CartDropdownItem/CartDropdownItem"
-import { useCartContext } from "../../context/CartContext/CartContext"
-import { CartItem } from "../../context/CartContext/types"
+import { CartDropdownItem } from "../../elements/CartDropdownItem/CartDropdownItem"
+import { useCartContext } from "../../../context/CartContext/CartContext"
+import { CartItem } from "../../../context/CartContext/types"
 
 export const CartDropdown = () => {
   const { cart, getAllItemsQuantity } = useCartContext()

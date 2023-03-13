@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { LogoFooter } from "../LogoFooter/LogoFooter"
+import { LogoFooter } from "../../elements/LogoFooter/LogoFooter"
 import { ABOUT_LINKS, CONTACT_LINKS } from "./constants"
 
 export const Footer = () => {

@@ -1,4 +1,4 @@
-import { useRecommendedProductsQuery } from "../../generated/graphql"
+import { useRecommendedProductsQuery } from "../../../generated/graphql"
 import { useRouter } from "next/router"
 
 export const LandingRecommendedProducts = () => {
